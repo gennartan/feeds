@@ -137,7 +137,7 @@ func (f *Feed) WriteJSON(w io.Writer) error {
 	return e.Encode(feed)
 }
 
-// Sort sorts the Items in the feed with the given less function.
+// Sort sorts the Items in the feed with the given less function .
 func (f *Feed) Sort(less func(a, b *Item) bool) {
 	lessFunc := func(i, j int) bool {
 		return less(f.Items[i], f.Items[j])
